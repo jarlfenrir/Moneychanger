@@ -232,8 +232,9 @@ public class PathDialog extends javax.swing.JDialog {
     }//GEN-LAST:event_jButton_CloseActionPerformed
 
 private void jButtonRemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRemoveActionPerformed
-    javaPaths.remove(jList_Paths.getSelectedIndex());
+    javaPaths.remove(jList_Paths.getSelectedValue());
     if(javaPaths.isEmpty()) this.jButtonRemove.setEnabled(false);
+        jList_Paths.setSelectedIndex(javaPaths.getSize() -1);
 }//GEN-LAST:event_jButtonRemoveActionPerformed
 
     /**
@@ -265,6 +266,7 @@ private void jButtonRemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN
 
     private void initValues() {
         jList_Paths.setModel(javaPaths);
+        jList_Paths.setSelectedIndex(0);
         pathFolderChooser = new JFileChooser();
         pathFolderChooser.setCurrentDirectory(new java.io.File("."));
         pathFolderChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);

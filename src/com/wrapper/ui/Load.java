@@ -210,9 +210,9 @@ public class Load {
             fireContentsChanged(this, 0, this.getSize());
         }
         
-        public void remove(int index){
-            _paths.remove(index);
-                        fireContentsChanged(this, 0, this.getSize());
+        public void remove(Object path){
+            _paths.remove(path); 
+            fireContentsChanged(this, 0, this.getSize());
         }
         
         public Collection<String> getPaths(){

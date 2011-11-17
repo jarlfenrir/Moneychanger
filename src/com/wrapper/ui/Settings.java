@@ -10,6 +10,7 @@
  */
 package com.wrapper.ui;
 
+import com.wrapper.ui.dialogs.SetTimeoutDialog;
 import com.wrapper.core.util.Utility;
 import com.wrapper.ui.dialogs.PathDialog;
 import javax.swing.JFileChooser;
@@ -194,8 +195,10 @@ public class Settings extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
 private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-    String result = JOptionPane.showInputDialog(rootPane, null);
-    loadData.SetTimeOut(result);
+    //String result = JOptionPane.showInputDialog(rootPane, "Set Timeout", "Timeout", JOptionPane.QUESTION_MESSAGE);
+    //loadData.SetTimeOut(result);
+     SetTimeoutDialog TimeOutDialog = new SetTimeoutDialog(this, true, loadData);
+     TimeOutDialog.setVisible(true);
 }//GEN-LAST:event_jMenuItem1ActionPerformed
 
 private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
