@@ -13,6 +13,7 @@ package com.wrapper.ui;
 import com.wrapper.ui.dialogs.SetTimeoutDialog;
 import com.wrapper.core.util.Utility;
 import com.wrapper.ui.dialogs.PathDialog;
+import com.wrapper.ui.dialogs.SetDataFolder;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
@@ -89,7 +90,7 @@ public class Settings extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Dialog", 1, 24));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Welcome To Money Changer");
         jLabel1.setName("jLabel1"); // NOI18N
@@ -114,13 +115,13 @@ public class Settings extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel2)
-                .addContainerGap(253, Short.MAX_VALUE))
+                .addContainerGap(254, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(197, Short.MAX_VALUE)
+                .addContainerGap(220, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addContainerGap())
         );
@@ -156,6 +157,11 @@ public class Settings extends javax.swing.JFrame {
 
         jMenuItem2.setText("Data Folder");
         jMenuItem2.setName("jMenuItem2"); // NOI18N
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenuSettings.add(jMenuItem2);
 
         jMenuItem3.setText("Wallet File");
@@ -205,6 +211,11 @@ private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
         PathDialog pathDialog = new PathDialog(this, true, javaPaths);
         pathDialog.setVisible(true);
 }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        SetDataFolder setDataFolder = new SetDataFolder(this, true, loadData);
+        setDataFolder.setVisible(true);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
